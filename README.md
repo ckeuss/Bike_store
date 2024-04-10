@@ -19,7 +19,7 @@ I found and downloaded the csv files for the different tables on Kaggle.
 - SQL
   
 ### References
-I used the following article by Craig Dickson to learn about connecting python to SQL and built a database.  
+I used the following article by Craig Dickson to learn about connecting python to SQL and building a database.  
 https://www.freecodecamp.org/news/connect-python-with-sql/
 
 ### Data Analysis
@@ -100,10 +100,21 @@ plt.show()
 ```
 
 ### Insights
-The analysed bike store sells seven different types of bikes, the most products fall into the categories _Mountain Bike_, _Cruisers Bicycles_ and _Road Bikes_. Other categories are _Children Bicycles_, _Electric Bikes_, _Comfort Bicycles_ and _Cyclocross Bicycles_. 
-March and April seem to be the months with the most orders and most of the orders were processed by the store in Santa Cruz, one of the three branches. The most popular bikes in 2016 to 2018 were mountain bikes and cruisers bicycles. The by far highest total revenue was made with mountain bikes with around 2.71 million dollar, although bikes of this category have only the fourth highest average list price. The most expensive bikes are on average electric bikes and road bikes. In terms of punctual deliveries the analysis shows that most deliveries arrive on time, however in 2016 to 2018 around one third of the orders in the months January to March, July, October and November were delivered after the required date.
+The analysed bike store sells seven different types of bikes, the most products fall into the categories _Mountain Bikes_, _Cruisers Bicycles_ and _Road Bikes_, which are also the most sold items. Other categories are _Children Bicycles_, _Electric Bikes_, _Comfort Bicycles_ and _Cyclocross Bicycles_. 
+
+![image](https://github.com/ckeuss/Bike_store/assets/147528104/682a4923-e553-4d39-8fd9-57452bd27789)
+
+March and April seem to be the months with the highest number of orders and the majority of the orders were processed by the store in Santa Cruz (Store 1), one of the three branches. 
 
 ![image](https://github.com/ckeuss/Bike_store/assets/147528104/23b06365-28bc-43d4-a437-d75a5cb09822)
+
+The most popular bikes in 2016 to 2018 were mountain bikes and cruisers bicycles. The by far highest total revenue was made with mountain bikes with around 2.71 million dollar, although bikes of this category have only the fourth highest average list price. The most expensive bikes are on average electric bikes and road bikes. 
+
+![image](https://github.com/ckeuss/Bike_store/assets/147528104/0f032132-f4b5-4b85-a8c9-9470af6284d1)
+
+In terms of punctual deliveries the analysis shows that most deliveries arrive on time, however in 2016 to 2018 around one third of the orders in the months January to March, July, October and November were delivered after the required date.
+
+
 
 
 
