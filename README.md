@@ -2,7 +2,7 @@
 ## SQL and Python
 ### Project Overview
 In this data analysis project a data base and queries are first created with SQL and then visualised using Python. 
-It aims to provide insight into the range of products, customer behavior and business of the bike store for the period 2016 to 2018.
+It aims to provide insight into e.g. the range of products, customers and sales of the bike store for the period 2016 to 2018.
 
 It can answer key questions such as:
 - What type of bike is most popular?
@@ -94,7 +94,7 @@ plt.show()
 
 ```
 
-### Insights
+### Insights on products, sales and revenue
 The analysed bike store sells seven different types of bikes, the most products fall into the categories _Mountain Bikes_, _Cruisers Bicycles_ and _Road Bikes_, which are also the most sold items. Other categories are _Children Bicycles_, _Electric Bikes_, _Comfort Bicycles_ and _Cyclocross Bicycles_. 
 
 ![image](https://github.com/ckeuss/Bike_store/assets/147528104/3dd3d6fe-87e5-47b0-9426-70ed989cfff6)
