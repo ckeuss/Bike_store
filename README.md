@@ -35,7 +35,7 @@ with open("./csv/categories.csv", newline= "") as csvfile:
         value2 = row[1]
         
         #SQL INSERT statement
-        query = f"INSERT INTO categories(category_id, category_name) VALUES ('{value1}', '{value2}')"
+        query = f"INSERT IGNORE INTO categories(category_id, category_name) VALUES ('{value1}', '{value2}')"
         execute_query(connection, query)
 ```
         
@@ -102,15 +102,21 @@ plt.show()
 ### Insights
 The analysed bike store sells seven different types of bikes, the most products fall into the categories _Mountain Bikes_, _Cruisers Bicycles_ and _Road Bikes_, which are also the most sold items. Other categories are _Children Bicycles_, _Electric Bikes_, _Comfort Bicycles_ and _Cyclocross Bicycles_. 
 
-![image](https://github.com/ckeuss/Bike_store/assets/147528104/682a4923-e553-4d39-8fd9-57452bd27789)
+![image](https://github.com/ckeuss/Bike_store/assets/147528104/3dd3d6fe-87e5-47b0-9426-70ed989cfff6)
 
-March and April seem to be the months with the highest number of orders and the majority of the orders were processed by the store in Santa Cruz (Store 1), one of the three branches. 
+March and April seem to be the months with the highest number of orders and the majority of the orders were processed by Baldwin Bikes in NY (Store 2), one of the three branches. 
 
-![image](https://github.com/ckeuss/Bike_store/assets/147528104/23b06365-28bc-43d4-a437-d75a5cb09822)
+![image](https://github.com/ckeuss/Bike_store/assets/147528104/0f9267f5-686f-4a01-917d-0f7cd2d54787)
 
-The most popular bikes in 2016 to 2018 were mountain bikes and cruisers bicycles. The by far highest total revenue was made with mountain bikes with around 2.71 million dollar, although bikes of this category have only the fourth highest average list price. The most expensive bikes are on average electric bikes and road bikes. 
 
-![image](https://github.com/ckeuss/Bike_store/assets/147528104/0f032132-f4b5-4b85-a8c9-9470af6284d1)
+The most popular bikes in 2016 to 2018 were _Mountain Bikes_ and _Cruisers Bicycles_. The by far highest total revenue was made with _Mountain Bikes_ with around 2.71 million dollar, although bikes of this category have only the fourth highest average list price. The most expensive bikes are on average _Electric Bikes_ and _Road Bikes_. 
+
+![image](https://github.com/ckeuss/Bike_store/assets/147528104/e7025d5c-fc44-4b3a-9ee2-b3db434f3cb5)
+
+
+From the revenue development of the three most profitable bike categories _Mountain Bikes_, _Road Bikes_ and _Electric Bikes_ from 2016 to 2018 it can be concluded that the revenue of _Electric Bikes_ is rsing while the revenue of _Mountain Bikes_ and _Road Bikes_ is on a decline, most severely concerning the _Mountain Bikes_ with a decline of around 2/3 of the original revenue in 2016. The decline could be due to many different factors and could be analyzed further by looking at the customers needs, marketing funnels, customer service, customer loyalty, price development and competition.
+
+![image](https://github.com/ckeuss/Bike_store/assets/147528104/6b4467d6-d8c9-4636-9f20-82c84a68ce4e)
 
 In terms of punctual deliveries the analysis shows that most deliveries arrive on time, however in 2016 to 2018 around one third of the orders in the months January to March, July, October and November were delivered after the required date.
 
