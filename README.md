@@ -26,44 +26,34 @@ https://www.freecodecamp.org/news/connect-python-with-sql/
 Some interesting code worked with:
 
 ```
-with open("./csv/categories.csv", newline= "") as csvfile:
+with open("./csv/brands.csv", newline= "") as csvfile:
     reader = csv.reader(csvfile)
     next(reader)  #Skip the header
     
     for row in reader:
-        value1 = row[0]
-        value2 = row[1]
-        
-        #SQL INSERT statement
-        query = f"INSERT IGNORE INTO categories(category_id, category_name) VALUES ('{value1}', '{value2}')"
-        execute_query(connection, query)
+        values = (row[0], row[1])
+
+        #INSERT
+        query = "INSERT IGNORE INTO brands(brand_id, brand_name) \
+        VALUES (%s, %s)"
+
+        execute_query(connection, query, values)
+
 ```
-        
+
 ```
-q4 ="""
-WITH sales_per_category AS (
-    SELECT
-        oi.order_id,
-        oi.quantity,
-        oi.list_price,
-        (oi.quantity * oi.list_price) * (1 - oi.discount) AS revenue,
-        p.category_id,
-        ca.category_name
-    FROM order_items oi
+q4 = """
+SELECT
+    ca.category_id,
+    ca.category_name,
+    SUM((oi.quantity * oi.list_price) * (1 - oi.discount)) AS total_revenue,
+    SUM(oi.quantity) AS sold_items
+FROM 
+    order_items oi
     INNER JOIN products p ON oi.product_id = p.product_id
     INNER JOIN categories ca ON p.category_id = ca.category_id
-)
-SELECT
-    category_id,
-    category_name,
-    SUM(revenue) AS total_revenue,
-    SUM(quantity) AS sold_items
-FROM 
-    sales_per_category
-GROUP BY
-    category_id
-ORDER BY
-    category_id;
+GROUP BY category_id
+ORDER BY category_id;
 
     """
 
@@ -81,12 +71,16 @@ columns = ["Category_id", "Category", "Total_revenue", "Sold_items"]
 df4 = pd.DataFrame(result_list, columns=columns)
 
 df4
+
 ```
+        
 ```
 #barplot
+colors = ["#EB615F", "#507399", "#EBDC59", "#99B82C", "#AB3F32", "#3A4E6B", "#C1B0FA"]
 plt.bar(df4["Category"], df4["Sold_items"], color = colors)
 
 #number on top of bars
+#index i as the x-coordinate to position the text at the center of each bar
 for i, items in enumerate(df4["Sold_items"]):
     plt.text(i, items - 30, str(items), ha= "center", va="top")
 
@@ -97,6 +91,7 @@ plt.title("Sold items per category")
 plt.xticks(rotation=45, ha="right")  # Rotate x-axis labels
 plt.tight_layout()
 plt.show()
+
 ```
 
 ### Insights
