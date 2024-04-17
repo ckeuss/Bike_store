@@ -1,0 +1,4 @@
+*.ipynb linguist-detectable=false
+
+*.py linguist-language=Python
+*.sql linguist-language=SQL
