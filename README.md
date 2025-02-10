@@ -117,7 +117,9 @@ In terms of punctual deliveries the analysis shows that most deliveries arrive o
 
 
 
+### Feedback
 
+If you encounter any issues, mistakes, or have suggestions for improvement, please let me know.
 
 
 
